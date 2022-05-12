@@ -1,0 +1,111 @@
+:root {
+    /* ### Primary */
+
+    --orange: hsl(25, 97%, 53%);
+
+    /* ### Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--very-dark-blue);
+}
+
+.component {
+    background: rgb(37, 45, 55, 0.5);
+    max-width: 350px;
+    padding: 30px 25px;
+    border-radius: 25px;
+}
+
+.icon-star {
+    background: var(--dark-blue);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.component-text {
+    margin-top: 25px;
+}
+.component-text h1 {
+    font-size: 1.5em;
+    color: var(--white);
+    margin-bottom: 15px;
+}
+.component-text p {
+    font-size: 0.85em;
+    color: var(--light-grey);
+    line-height: 22px;
+}
+
+.component-rating {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.component-rating-number-box {
+    display: flex;
+    justify-content: space-between;
+}
+.component-rating-number-box p {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--dark-blue);
+    color: var(--light-grey);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.component-rating-number-box p:hover {
+    background: var(--orange);
+    color: var(--white);
+    transition: 0.5s;
+}
+.active-box {
+    background: var(--medium-grey) !important;
+    color: var(--white) !important;
+}
+
+.submit-btn {
+    background: var(--orange);
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12.5px 0;
+    border: none;
+    border-radius: 25px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.submit-btn:hover {
+    background: var(--white);
+    color: var(--orange);
+    letter-spacing: 3px;
+    transition: 0.5s;
+}
