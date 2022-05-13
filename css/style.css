@@ -38,6 +38,12 @@ body {
     border-radius: 25px;
 }
 
+@media (max-width: 500px) {
+    .component {
+        max-width: 325px;
+    }
+}
+
 .icon-star {
     background: var(--dark-blue);
     padding: 10px;
