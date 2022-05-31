@@ -12,8 +12,6 @@
     --very-dark-blue: hsl(216, 12%, 8%);
 }
 
-
-
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -32,11 +30,13 @@ body {
 }
 
 .component {
+    position: relative;
     background: rgb(37, 45, 55, 0.5);
     max-width: 350px;
     padding: 30px 25px;
     border-radius: 25px;
     box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.25);
+    transition: 0.5s;
 }
 
 @media (max-width: 500px) {
@@ -76,7 +76,7 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.component-rating-number-box p {
+.component-rating-number-box-number {
     width: 40px;
     height: 40px;
     display: flex;
@@ -88,7 +88,7 @@ body {
     cursor: pointer;
     transition: 0.5s;
 }
-.component-rating-number-box p:hover {
+.component-rating-number-box-number:hover {
     background: var(--orange);
     color: var(--white);
     transition: 0.5s;
@@ -117,21 +117,19 @@ body {
     transition: 0.5s;
 }
 
-
-
-
-
 .component-response {
     background: rgb(37, 45, 55, 0.5);
     max-width: 350px;
     padding: 30px 25px;
     border-radius: 25px;
     box-shadow: 0px 3px 10px rgb(0 0 0 / 25%);
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
+    visibility: hidden;
+    transition: 0.5s;
 }
 
 @media (max-width: 500px) {
@@ -144,7 +142,7 @@ body {
     height: 100px;
 }
 
-.rating-choice-txt {
+.result {
     color: var(--orange);
     background: var(--dark-blue);
     padding: 5px 15px;
